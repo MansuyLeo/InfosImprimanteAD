@@ -1,5 +1,5 @@
 # InfosImprimanteAD
-Script pour obtenir des informations selon le nom ou l'IP de l'imprimante dans l'AD.
+Script pour obtenir des informations selon le nom ou l'IP de l'imprimante dans l'AD (Serveur de la file d'impression, localisation, port,...)
 
 ## Instructions:
 
