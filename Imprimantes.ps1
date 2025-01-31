@@ -33,5 +33,5 @@ try {
         Write-Host "Imprimante introuvable avec $userInput" -ForegroundColor Red
     }
 } catch {
-    Write-Error "Erreur lors de la recherche de l'imprimante: $_" -ForegroundColor Red
+    Write-Error "Erreur lors de la recherche de l'imprimante: $_"
 }
