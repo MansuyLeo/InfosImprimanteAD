@@ -4,6 +4,7 @@ Script pour obtenir des informations selon le nom ou l'IP de l'imprimante dans l
 ## Pré-requis:
 
 - Le script doit être éxécuté par une machine joint au domaine Active Directory pour fonctionner
+- La v2 cherche déjà l'imprimante sur les files d'impressions qui sont à compléter selon les files d'impressions de votre SI. Puis il va chercher les infos dans l'AD
 
 ## Instructions:
 
