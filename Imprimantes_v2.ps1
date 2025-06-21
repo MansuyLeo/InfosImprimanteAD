@@ -10,13 +10,7 @@
 # Liste des serveurs d'impressions de PSL
 
 $printServers = @(
-    "S30P08RGX01",
-    "S30P08RGFCR",
-    "S30P08RGBDM", # Censé être en cours de décomissionnement
-    "S30MTECE519",
-    "S30ACHEM725",
-    "S30MTECE336",
-    "WGCOLFSP10"
+ # à compléter selon les files d'impressions de votre SI
 )
 
 $userInput = Read-Host "Entrez le nom ou l'adresse IP de l'imprimante"
