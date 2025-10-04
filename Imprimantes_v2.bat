@@ -1,4 +1,4 @@
-:: Script par MANSUY Léo - Alternant TAM PSL
+:: Script par MANSUY Léo
 
 @echo off
 
@@ -6,8 +6,7 @@ echo.
 echo ##############################################
 echo #                                            #
 echo #            INFOS IMPRIMANTES AD            #
-echo #   Auteur: MANSUY Leo - Alternant TAM PSL   #
-echo #              e.SNCF Solutions              #
+echo #             Auteur: MANSUY Leo             #
 echo #                                            #
 echo ##############################################
 echo.
@@ -28,3 +27,4 @@ if /i "%choice%"=="n" exit
 :: Message d'erreur pour une entrée non valide
 echo Choix invalide. Veuillez entrer 'y' ou 'n'.
 goto prompt
+
