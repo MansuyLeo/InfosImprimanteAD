@@ -1,13 +1,13 @@
-﻿# Script par MANSUY Léo - Alternant TAM PSL - DSNU ASU IDF - e.SNCF Solutions
-# Recherche une imprimante sur les serveurs d'impressions du secteur PSL
+﻿# Script par MANSUY Léo
+# Recherche une imprimante sur les serveurs d'impressions et dans l'AD
 # Si modification du script, se rappeler d'encoder en UTF-8 avec BOM
 
 <# Version 2.0
-    - Au lieu de rechercher les imprimantes dans l'AD, sollicitation directe sur les serveurs d'impression de PSL
+    - Au lieu de rechercher les imprimantes dans l'AD, sollicitation directe sur les serveurs d'impression
     - Compatibilité de l'éxecution du script avec les postes propulses (OPW)
 #>
 
-# Liste des serveurs d'impressions de PSL
+# Liste des serveurs d'impressions
 
 $printServers = @(
  # à compléter selon les files d'impressions de votre SI
@@ -51,7 +51,7 @@ if (-not $found) {
 
 Write-Host "Recherche de l'imprimante '$userInput' dans l'AD..." -ForegroundColor Yellow
 
-# Si le poste est un POCO on cherche aussi dans l'AD
+# Si le poste est membre d'un domaine on cherche aussi dans l'AD
 $domain = (Get-WmiObject Win32_ComputerSystem).PartOfDomain
 
 if ($domain) {
@@ -84,5 +84,6 @@ if ($domain) {
     Write-Error "Erreur lors de la recherche de l'imprimante dans l'AD: $_"
     }
 } else {
-    Write-Host "Vous utilisez un poste OPW, recherche dans l'AD impossible" -ForegroundColor Red
+    Write-Host "Vous utilisez un poste qui n'est pas join à un domaine (poste intune ?), recherche dans l'AD impossible" -ForegroundColor Red
 }
+
